@@ -14,7 +14,7 @@ enum ResponseType {
 struct Question {
     let text: String
     let type: ResponseType
-    let answer: [Answer]
+    let answers: [Answer]
 }
 
 extension Question {
@@ -22,29 +22,29 @@ extension Question {
         return [
             Question(text: "Какую пищу вы предпочитаете?",
                      type: .single,
-                     answer: [
+                     answers: [
                         Answer(text: "Стейк", type: .dog),
                         Answer(text: "Рыба", type: .cat),
-                        Answer(text: "Морковь", type: .turtle),
-                        Answer(text: "Кукуруза", type: .rabbit)
+                        Answer(text: "Морковь", type: .rabbit),
+                        Answer(text: "Кукуруза", type: .turtle)
                      ]
                     ),
             Question(text: "Какую пищу вы предпочитаете?",
-                     type: .single,
-                     answer: [
-                        Answer(text: "Стейк", type: .dog),
-                        Answer(text: "Рыба", type: .cat),
-                        Answer(text: "Морковь", type: .turtle),
-                        Answer(text: "Кукуруза", type: .rabbit)
+                     type: .multiple,
+                     answers: [
+                        Answer(text: "Плавать", type: .dog),
+                        Answer(text: "Спать", type: .cat),
+                        Answer(text: "Обниматься", type: .rabbit),
+                        Answer(text: "Есть", type: .turtle)
                      ]
                     ),
             Question(text: "Любите ли вы поездки на машине?",
                      type: .range,
-                     answer: [
+                     answers: [
                         Answer(text: "Обожаю", type: .dog),
-                        Answer(text: "Обожаю", type: .cat),
-                        Answer(text: "Ненавижу", type: .turtle),
-                        Answer(text: "Ненавижу", type: .rabbit)
+                        Answer(text: "Люблю", type: .cat),
+                        Answer(text: "Равнодушно", type: .rabbit),
+                        Answer(text: "Ненавижу", type: .turtle)
                      ]
                     )
         ]
